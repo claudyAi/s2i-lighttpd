@@ -14,7 +14,7 @@ LABEL io.k8s.description="Platform for serving static HTML files" \
       io.openshift.tags="builder,html,lighttpd"
 
 # Enable epel repository for lighttpd
-RUN yum install -y epel-release
+RUN yum install -y epel-release || true
 
 # Import the EPEL GPG-key
 RUN rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7
